@@ -3,17 +3,15 @@ import Todo from "./Todo";
 
 const TodoList = props => {
     return (
-        <div>
+        <ul className="todo-list">
             {props.todos.map((todo, id) => (
-                <ul className="todo-list">
                     <Todo 
                         todo={todo} 
                         key={id} 
                         toggleComplete={props.toggleComplete} 
                     />
-                </ul>
             ))}
-        </div>
+        </ul>
     )
 }
 

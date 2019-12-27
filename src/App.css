@@ -11,16 +11,55 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 50%;
+    margin: auto;
 }
 
 .todos {
     font-size: 3.5rem;
-    background: #eee;
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
+    background: #eee;
+    transition: 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.todos:nth-child(odd) {
+.todos:nth-child(even) {
     background: #f9f9f9;
 }
+
+.todos:hover {
+    background: #ddd;
+  }
+
+.completed-todos {
+    font-size: 3.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #888;
+    transition: 0.3s;
+    color: #fff;
+    text-decoration: line-through;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.completed-todos::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 30%;
+    left: 5%;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
