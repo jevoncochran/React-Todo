@@ -1,0 +1,26 @@
+.App {
+    text-align: center;
+    color: black;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.todo-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todos {
+    font-size: 3.5rem;
+    background: #eee;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+}
+
+.todos:nth-child(odd) {
+    background: #f9f9f9;
+}
